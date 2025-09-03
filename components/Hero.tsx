@@ -1,0 +1,42 @@
+
+import React from 'react';
+import { Button } from './Button';
+import { CheckCircleIcon } from './Icons';
+
+const Hero: React.FC = () => {
+  return (
+    <section id="hero" className="relative bg-slate-50 py-20 md:py-32">
+       <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{backgroundImage: "url('https://picsum.photos/1600/900?grayscale&blur=2')"}}></div>
+      <div className="container mx-auto px-6 text-center relative z-10">
+        <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+          <span className="text-blue-600">月額1万円</span>から始める、<br />
+          成果の出るBtoB向けLP制作
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+          高額な初期費用は不要。企画から制作、運用・改善まで、すべてコミコミのサブスクリプション型サービスです。
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+          <div className="flex items-center text-slate-700">
+            <CheckCircleIcon className="w-6 h-6 text-blue-500 mr-2" />
+            <span>最短5営業日納品</span>
+          </div>
+          <div className="flex items-center text-slate-700">
+            <CheckCircleIcon className="w-6 h-6 text-blue-500 mr-2" />
+            <span>修正・更新し放題</span>
+          </div>
+          <div className="flex items-center text-slate-700">
+            <CheckCircleIcon className="w-6 h-6 text-blue-500 mr-2" />
+            <span>サーバー・ドメイン費込み</span>
+          </div>
+        </div>
+        <div className="mt-10">
+          <Button href="#contact" variant="primary" size="lg">
+            まずは無料で相談する
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
