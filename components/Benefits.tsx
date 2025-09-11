@@ -1,24 +1,37 @@
 
 import React from 'react';
+import { CurrencyYenIcon, RocketLaunchIcon, PencilSquareIcon, SparklesIcon, CodeBracketIcon, ChartBarIcon } from './Icons';
 
 const benefits = [
   {
-    title: '制作コストを大幅に削減し、投資対効果を最大化',
-    description: '数十万円以上かかることもあるLP制作の初期費用が0円に。低リスクで新しいマーケティング施策を始められ、他の重要な業務に予算を回すことができます。',
-    imageUrl: 'https://picsum.photos/id/1074/600/400',
-    align: 'left',
+    icon: <CurrencyYenIcon className="w-10 h-10 text-white" />,
+    title: '圧倒的な低コスト',
+    description: '初期費用0円、月額1万円から。BtoBのLP制作を圧倒的なコストパフォーマンスで実現します。',
   },
   {
-    title: '機会損失を防ぎ、スピーディーにビジネスを展開',
-    description: '「LPがあれば受注できたのに...」そんな機会損失を防ぎます。市場の変化や顧客のニーズに素早く対応し、競合他社に差をつけることができます。',
-    imageUrl: 'https://picsum.photos/id/1/600/400',
-    align: 'right',
+    icon: <RocketLaunchIcon className="w-10 h-10 text-white" />,
+    title: '最短5営業日のスピード納品',
+    description: 'ヒアリング後、最短5営業日でLPを公開。ビジネスチャンスを逃しません。',
   },
   {
-    title: 'LP制作・運用の手間から解放され、本業に集中',
-    description: '専門的な知識が必要なLPの制作や更新作業はすべて丸投げ。担当者様は本来注力すべきコア業務に集中でき、組織全体の生産性向上に貢献します。',
-    imageUrl: 'https://picsum.photos/id/10/600/400',
-    align: 'left',
+    icon: <PencilSquareIcon className="w-10 h-10 text-white" />,
+    title: 'テキスト・画像の修正無制限',
+    description: 'サービス内容の変更やキャンペーンに合わせて、いつでもスピーディーにLPを更新できます。',
+  },
+  {
+    icon: <SparklesIcon className="w-10 h-10 text-white" />,
+    title: '高品質なデザイン',
+    description: 'BtoBに特化した信頼感のあるデザインをご提供。テンプレートに頼らないオリジナル制作も可能です。',
+  },
+  {
+    icon: <CodeBracketIcon className="w-10 h-10 text-white" />,
+    title: 'フォーム設置もコミコミ',
+    description: 'お問い合わせや資料請求フォームの設置も標準対応。リード獲得を強力にサポートします。',
+  },
+  {
+    icon: <ChartBarIcon className="w-10 h-10 text-white" />,
+    title: '分析・改善サポート',
+    description: '公開後のアクセス解析や改善提案もプラン内で対応。成果の出るLPに育てます。',
   },
 ];
 
@@ -28,22 +41,20 @@ const Benefits: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
-            「サブスクLP」がもたらす<span className="text-blue-600">3つのメリット</span>
+            「サブスクLP」<span className="text-blue-600">サービスの特徴</span>
           </h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-            貴社のビジネスが、LP導入によってこう変わります。
+          <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
+            LP制作の悩みを解消し、ビジネスを加速させる6つの特徴
           </p>
         </div>
-        <div className="mt-16 space-y-16">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${benefit.align === 'right' ? 'md:flex-row-reverse' : ''}`}>
-              <div className="md:w-1/2">
-                <img src={benefit.imageUrl} alt={benefit.title} className="rounded-lg shadow-xl w-full object-cover aspect-[3/2]" />
+            <div key={index} className="bg-white p-8 rounded-lg shadow-lg border border-slate-200 text-center">
+              <div className="inline-block bg-blue-600 p-4 rounded-full">
+                {benefit.icon}
               </div>
-              <div className="md:w-1/2">
-                <h3 className="text-2xl font-bold text-slate-900">{benefit.title}</h3>
-                <p className="mt-4 text-slate-600 leading-relaxed">{benefit.description}</p>
-              </div>
+              <h3 className="mt-6 text-xl font-bold text-slate-900">{benefit.title}</h3>
+              <p className="mt-2 text-slate-600 text-lg">{benefit.description}</p>
             </div>
           ))}
         </div>

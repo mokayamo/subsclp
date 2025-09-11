@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Empathy from './components/Empathy';
+import Causes from './components/Causes';
 import Features from './components/Features';
 import Benefits from './components/Benefits';
 import Conditions from './components/Conditions';
@@ -18,10 +19,11 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Empathy />
+        <Causes />
         <Features />
         <Benefits />
-        <Conditions />
         <Process />
+        <Conditions />
         <Trust />
         <Closing />
       </main>

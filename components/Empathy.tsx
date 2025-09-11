@@ -12,20 +12,42 @@ const Empathy: React.FC = () => {
   return (
     <section id="empathy" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800">
-          LP制作で、<span className="text-blue-600">こんなお悩み</span>ありませんか？
-        </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {painPoints.map((point, index) => (
-            <div key={index} className="bg-slate-50 p-6 rounded-lg shadow-md border border-slate-200">
-              <div className="flex items-center">
-                <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl">
-                  ？
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+            LP制作で、<span className="text-blue-600">こんなお悩み</span>ありませんか？
+          </h2>
+          <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
+            多くのBtoB企業様が抱えるLP制作の代表的な課題です。
+          </p>
+        </div>
+        <div className="max-w-6xl mx-auto mt-12">
+          <div className="flex flex-col lg:flex-row gap-12 lg:items-stretch">
+            {/* 左側：お悩み項目 */}
+            <div className="flex-1 space-y-6 flex flex-col justify-center">
+              {painPoints.map((point, index) => (
+                <div key={index} className="bg-slate-50 p-6 rounded-lg shadow-md border border-slate-200">
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl">
+                      ？
+                    </div>
+                    <p className="ml-4 text-slate-700 font-medium text-lg">{point}</p>
+                  </div>
                 </div>
-                <p className="ml-4 text-slate-700 font-medium">{point}</p>
+              ))}
+            </div>
+            
+            {/* 右側：画像 */}
+            <div className="flex-1 flex justify-center">
+              <div className="relative w-full max-w-md h-full">
+                <img 
+                  src="https://picsum.photos/400/400?business&grayscale" 
+                  alt="悩んでいるビジネスパーソン"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute inset-0 bg-blue-600/10 rounded-lg"></div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

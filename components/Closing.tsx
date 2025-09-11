@@ -16,6 +16,10 @@ const Closing: React.FC = () => {
       alert('プライバシーポリシーへの同意が必要です。');
       return;
     }
+    if (!message.trim()) {
+      alert('ご相談内容を入力してください。');
+      return;
+    }
     setStatus('submitting');
     console.log({ name, company, email, message });
     // Simulate API call
@@ -33,7 +37,7 @@ const Closing: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold">
             さあ、成果の出るLP制作を始めましょう
           </h2>
-          <p className="mt-4 text-lg text-blue-100 max-w-3xl mx-auto">
+          <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
             まずは無料相談から。お客様のビジネスに最適なLPをご提案します。
             <br/>
             強引な営業は一切いたしませんので、お気軽にお問い合わせください。
@@ -62,8 +66,8 @@ const Closing: React.FC = () => {
                   <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700">ご相談内容</label>
-                  <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-700">ご相談内容<span className="text-red-500">*</span></label>
+                  <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
                 </div>
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
@@ -76,14 +80,11 @@ const Closing: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-8">
-                <Button type="submit" variant="primary" size="lg" fullWidth disabled={status === 'submitting'}>
-                   {status === 'submitting' ? '送信中...' : '無料で相談する'}
+              <div className="mt-8 text-center">
+                <Button type="submit" variant="primary" disabled={status === 'submitting'}>
+                   {status === 'submitting' ? '送信中...' : 'ご相談内容を送信する'}
                 </Button>
               </div>
-              <p className="text-center mt-4 text-sm text-slate-500">
-                フォーム送信後、すぐに始めたい方は <a href="#start" className="text-blue-600 hover:underline">今すぐ始める</a>
-              </p>
             </form>
           )}
         </div>

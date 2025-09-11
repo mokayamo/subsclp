@@ -13,7 +13,8 @@ const Hero: React.FC = () => {
           成果の出るBtoB向けLP制作
         </h1>
         <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-          高額な初期費用は不要。企画から制作、運用・改善まで、すべてコミコミのサブスクリプション型サービスです。
+          高額な初期費用は不要。企画から制作、運用・改善まで、<br />
+          すべてコミコミのサブスクリプション型サービスです。
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
           <div className="flex items-center text-slate-700">
@@ -31,7 +32,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="mt-10">
           <Button href="#contact" variant="primary" size="lg">
-            まずは無料で相談する
+            無料で相談する
           </Button>
         </div>
       </div>

@@ -41,23 +41,25 @@ The application follows a modular component architecture with each landing page 
 - `components/` - Landing page sections following the BtoB LP structure:
   - `Header.tsx` - Fixed header with logo and CTA button
   - `Hero.tsx` - First view with main value proposition
-  - `Empathy.tsx` - Pain points section (お悩み)
-  - `Features.tsx` - Service features/USP
-  - `Benefits.tsx` - Implementation benefits (メリット)
-  - `Conditions.tsx` - Contract terms (契約条件)
-  - `Process.tsx` - Implementation flow (導入の流れ)
-  - `Trust.tsx` - Trust elements (信頼・安心)
-  - `Closing.tsx` - Final CTA with contact form
+  - `Empathy.tsx` - Pain points section with 4 items (left) + image (right)
+  - `Causes.tsx` - Problem causes section (3 horizontal cards with icons)
+  - `Features.tsx` - Service features/USP (3 detailed items with images)
+  - `Benefits.tsx` - Implementation benefits (6 icon cards in grid)
+  - `Process.tsx` - Implementation flow (4-step timeline)
+  - `Conditions.tsx` - Contract terms (6 cards in grid format)
+  - `Trust.tsx` - Trust/achievements section (3 horizontal cards)
+  - `Closing.tsx` - Final CTA with contact form (required: name, email, message)
   - `Footer.tsx` - Legal links and copyright
   - `Button.tsx` - Reusable CTA button component
   - `Icons.tsx` - Shared icon components
 
 ### Key Implementation Details
-- **Design System**: BtoB-focused design with blue/white/gray color scheme and orange CTA buttons
-- **Form Handling**: Contact form in `Closing.tsx` with privacy policy consent validation
+- **Design System**: BtoB-focused design with blue/white/gray color scheme and blue CTA buttons (「無料で相談する」)
+- **Form Handling**: Contact form in `Closing.tsx` with required fields (name, email, message) and privacy policy consent validation
 - **Legal Pages**: Static HTML files in `public/` directory (terms.html, privacy.html, law.html)
 - **Path Aliases**: `@/*` maps to project root directory
 - **Responsive Design**: Mobile-first approach with Tailwind responsive utilities
+- **Section Order**: Hero → Empathy → Causes → Features → Benefits → Process → Conditions → Trust → Closing
 
 ### Current Deployment Setup
 - **Production URL**: https://subsclp.vercel.app
@@ -96,6 +98,8 @@ Always run `npm run build` after significant changes to ensure production readin
 - Follow existing Tailwind CSS patterns for styling consistency
 - Maintain Japanese content in components as per target audience
 - Preserve existing BtoB design language (professional, trustworthy)
+- Consistent font sizes: Headings (`text-3xl md:text-4xl`), section descriptions (`text-xl`), content text (`text-lg`)
+- All CTAs use consistent "無料で相談する" button text except form submission ("ご相談内容を送信する")
 
 ### Deployment Workflow
 1. Make changes locally

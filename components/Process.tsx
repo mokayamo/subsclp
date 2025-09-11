@@ -33,7 +33,7 @@ const Process: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
             ご利用開始までの<span className="text-blue-600">流れ</span>
           </h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
             お問い合わせから最短5営業日でLPを公開できます。
           </p>
         </div>
@@ -50,7 +50,7 @@ const Process: React.FC = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-slate-600">{item.description}</p>
+                <p className="mt-2 text-slate-600 text-lg">{item.description}</p>
                 {index !== steps.length - 1 && (
                   <div className="absolute -bottom-5 left-4 transform -translate-x-1/2">
                     <ArrowDownIcon className="w-6 h-6 text-slate-300" />
