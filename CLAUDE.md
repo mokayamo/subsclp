@@ -54,7 +54,7 @@ The application follows a modular component architecture with each landing page 
   - `Icons.tsx` - Shared icon components
 
 ### Key Implementation Details
-- **Design System**: BtoB-focused design with blue/white/gray color scheme and blue CTA buttons (「無料で相談する」)
+- **Design System**: BtoB-focused design with blue/white/gray color scheme and blue CTA buttons (「資料を受けとる」)
 - **Form Handling**: Contact form in `Closing.tsx` with required fields (name, email, message) and privacy policy consent validation
 - **Legal Pages**: Static HTML files in `public/` directory (terms.html, privacy.html, law.html)
 - **Path Aliases**: `@/*` maps to project root directory
@@ -99,7 +99,7 @@ Always run `npm run build` after significant changes to ensure production readin
 - Maintain Japanese content in components as per target audience
 - Preserve existing BtoB design language (professional, trustworthy)
 - Consistent font sizes: Headings (`text-3xl md:text-4xl`), section descriptions (`text-xl`), content text (`text-lg`)
-- All CTAs use consistent "無料で相談する" button text except form submission ("ご相談内容を送信する")
+- All CTAs use consistent "資料を受けとる" button text except form submission ("ご相談内容を送信する")
 
 ### Deployment Workflow
 1. Make changes locally

@@ -3,22 +3,22 @@ import React from 'react';
 
 const achievements = [
   {
-    title: 'サポート体制',
-    heading: '充実したサポート体制',
-    description: 'LP制作から運用まで、専任チームが一貫してサポート。お客様のビジネス成功まで責任を持って伴走します。',
-    imageUrl: 'https://picsum.photos/id/1/400/300',
-  },
-  {
     title: '制作実績',
     heading: '豊富な制作実績',
-    description: 'これまで200社以上のBtoB企業様のLP制作を手がけ、業界問わず成果を出し続けています。',
+    description: 'これまで100本以上のLP制作を手がけ、業界問わず成果を出し続けています。',
     imageUrl: 'https://picsum.photos/id/2/400/300',
   },
   {
     title: '顧客満足度',
-    heading: '顧客満足度98%',
-    description: 'お客様からの高い評価をいただき、継続率95%以上を維持。安心してお任せいただけます。',
-    imageUrl: 'https://picsum.photos/id/3/400/300',
+    heading: '高い専門性',
+    description: 'マーケティング歴20年以上のマーケターが企画設計に関わることで、成果の出るLPが手に入ります。',
+    imageUrl: '/image.png',
+  },
+  {
+    title: 'サポート体制',
+    heading: '充実したサポート体制',
+    description: 'LP制作から運用まで、専任チームが一貫してサポート。お客様のビジネス成功まで責任を持って伴走します。',
+    imageUrl: 'https://picsum.photos/id/1/400/300',
   },
 ];
 
@@ -55,7 +55,7 @@ const Trust: React.FC = () => {
                 <img 
                   src={achievement.imageUrl} 
                   alt={achievement.heading}
-                  className="w-full h-48 object-cover rounded-lg"
+                  className="w-full h-48 object-contain rounded-lg"
                 />
               </div>
             </div>

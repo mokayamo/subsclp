@@ -5,22 +5,22 @@ import { ArrowDownIcon } from './Icons';
 const steps = [
   {
     step: 1,
-    title: '無料相談・ヒアリング',
-    description: 'まずはフォームからお問い合わせください。お客様の課題やLPの目的を詳しくヒアリングします。',
+    title: '資料ダウンロード',
+    description: 'まずは当ページのフォームから資料ダウンロードをお申し込みください。ご契約書を送付いたしますので、契約の締結をいただきます。',
   },
   {
     step: 2,
-    title: 'ご提案・ご契約',
-    description: 'ヒアリング内容を元に、最適なプランとLP構成をご提案します。内容にご納得いただけましたらご契約となります。',
+    title: '企画設計',
+    description: 'ヒアリングシートの内容をもとに、企画設計を行います。内容に問題がないかご確認をいただきます。',
   },
   {
     step: 3,
-    title: '制作・ご確認',
+    title: '制作',
     description: '弊社にてLPのデザイン・コーディングを行います。制作途中で内容をご確認いただき、修正点を反映します。',
   },
   {
     step: 4,
-    title: '公開・運用開始',
+    title: '公開',
     description: '最終確認後、LPをインターネット上に公開します。公開後の修正や分析サポートもスタートします。',
   },
 ];
@@ -34,7 +34,7 @@ const Process: React.FC = () => {
             ご利用開始までの<span className="text-blue-600">流れ</span>
           </h2>
           <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
-            お問い合わせから最短5営業日でLPを公開できます。
+            内容確定から最短5営業日でLPを公開できます。
           </p>
         </div>
         <div className="mt-12 max-w-2xl mx-auto">

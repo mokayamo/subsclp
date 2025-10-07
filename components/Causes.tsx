@@ -4,7 +4,7 @@ import { ExclamationTriangleIcon, CurrencyDollarIcon, CogIcon } from './Icons';
 const causes = [
   {
     icon: <CurrencyDollarIcon className="w-10 h-10 text-white" />,
-    title: '高額な初期費用',
+    title: '高額な費用',
     description: '従来のLP制作は50万円〜100万円の初期投資が必要。中小企業には大きな負担となってしまいます。'
   },
   {

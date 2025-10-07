@@ -6,7 +6,7 @@ const benefits = [
   {
     icon: <CurrencyYenIcon className="w-10 h-10 text-white" />,
     title: '圧倒的な低コスト',
-    description: '初期費用0円、月額1万円から。BtoBのLP制作を圧倒的なコストパフォーマンスで実現します。',
+    description: '初期費用0円、月額1万円。BtoBのLP制作を圧倒的なコストパフォーマンスで実現します。',
   },
   {
     icon: <RocketLaunchIcon className="w-10 h-10 text-white" />,
@@ -21,17 +21,17 @@ const benefits = [
   {
     icon: <SparklesIcon className="w-10 h-10 text-white" />,
     title: '高品質なデザイン',
-    description: 'BtoBに特化した信頼感のあるデザインをご提供。テンプレートに頼らないオリジナル制作も可能です。',
+    description: 'BtoBに特化した信頼感のあるデザインをご提供。リード獲得を促進する独自の構成を採用。',
   },
   {
     icon: <CodeBracketIcon className="w-10 h-10 text-white" />,
     title: 'フォーム設置もコミコミ',
-    description: 'お問い合わせや資料請求フォームの設置も標準対応。リード獲得を強力にサポートします。',
+    description: 'お問い合わせや資料請求フォームの設置も標準対応。フォーム開発費用もコミコミなので安心してください。',
   },
   {
     icon: <ChartBarIcon className="w-10 h-10 text-white" />,
-    title: '分析・改善サポート',
-    description: '公開後のアクセス解析や改善提案もプラン内で対応。成果の出るLPに育てます。',
+    title: 'サーバー・ドメインも不要',
+    description: 'LPを公開するためのサーバー・ドメインも当社にて取得・管理するので、技術的な知識がなくても問題ありません。',
   },
 ];
 

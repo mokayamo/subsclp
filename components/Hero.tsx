@@ -9,11 +9,11 @@ const Hero: React.FC = () => {
        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{backgroundImage: "url('https://picsum.photos/1600/900?grayscale&blur=2')"}}></div>
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
-          <span className="text-blue-600">月額1万円</span>から始める、<br />
-          成果の出るBtoB向けLP制作
+          リード獲得を最大化する<br />
+          売れるLPを<span className="text-blue-600">月額1万円</span>で
         </h1>
         <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-          高額な初期費用は不要。企画から制作、運用・改善まで、<br />
+          高額な初期費用は不要。企画から制作、運用まで、<br />
           すべてコミコミのサブスクリプション型サービスです。
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="mt-10">
           <Button href="#contact" variant="primary" size="lg">
-            無料で相談する
+            資料を受けとる
           </Button>
         </div>
       </div>

@@ -16,10 +16,6 @@ const Closing: React.FC = () => {
       alert('プライバシーポリシーへの同意が必要です。');
       return;
     }
-    if (!message.trim()) {
-      alert('ご相談内容を入力してください。');
-      return;
-    }
     setStatus('submitting');
     console.log({ name, company, email, message });
     // Simulate API call
@@ -38,9 +34,9 @@ const Closing: React.FC = () => {
             さあ、成果の出るLP制作を始めましょう
           </h2>
           <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
-            まずは無料相談から。お客様のビジネスに最適なLPをご提案します。
+            まずは以下のフォームに入力し、資料を受け取ってください。
             <br/>
-            強引な営業は一切いたしませんので、お気軽にお問い合わせください。
+            具体的な相談をご記入いただければ、担当者より返答させていただきます。
           </p>
         </div>
 
@@ -58,16 +54,16 @@ const Closing: React.FC = () => {
                   <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-slate-700">会社名</label>
-                  <input type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)} className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
+                  <label htmlFor="company" className="block text-sm font-medium text-slate-700">会社名<span className="text-red-500">*</span></label>
+                  <input type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700">メールアドレス<span className="text-red-500">*</span></label>
                   <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700">ご相談内容<span className="text-red-500">*</span></label>
-                  <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-700">ご相談内容</label>
+                  <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
                 </div>
                 <div className="flex items-start">
                   <div className="flex items-center h-5">

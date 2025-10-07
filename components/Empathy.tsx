@@ -2,10 +2,10 @@
 import React from 'react';
 
 const painPoints = [
-  'LP制作は初期費用が高すぎて手が出せない...',
+  'LP制作は費用が高すぎて手が出せない...',
   '専門知識がなく、何をどう頼めばいいか分からない。',
   '修正のたびに追加費用や時間がかかってしまう。',
-  'フォーム設置など、技術的なことが難しくて困っている。'
+  'サーバー・ドメイン管理、フォーム設置など、技術的なことが難しくて困っている。'
 ];
 
 const Empathy: React.FC = () => {
@@ -14,10 +14,10 @@ const Empathy: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
-            LP制作で、<span className="text-blue-600">こんなお悩み</span>ありませんか？
+            BtoB企業が抱える<span className="text-blue-600">LP制作の悩み</span>
           </h2>
           <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
-            多くのBtoB企業様が抱えるLP制作の代表的な課題です。
+            あなたも同じように悩んでいませんか？
           </p>
         </div>
         <div className="max-w-6xl mx-auto mt-12">

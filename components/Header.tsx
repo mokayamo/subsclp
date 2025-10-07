@@ -10,10 +10,10 @@ const Header: React.FC = () => {
           サブスクLP
         </a>
         <div className="hidden md:block">
-           <Button href="#contact" variant="primary">無料で相談する</Button>
+           <Button href="#contact" variant="primary">資料を受けとる</Button>
         </div>
         <div className="md:hidden">
-           <Button href="#contact" variant="primary" size="sm">無料で相談する</Button>
+           <Button href="#contact" variant="primary" size="sm">資料を受けとる</Button>
         </div>
       </div>
     </header>

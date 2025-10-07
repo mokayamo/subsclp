@@ -4,8 +4,8 @@ import { CheckIcon } from './Icons';
 
 const conditions = [
     { item: '初期費用', value: '0円' },
-    { item: '月額費用', value: '10,000円 (税抜)〜' },
-    { item: '最低契約期間', value: '6ヶ月' },
+    { item: '月額費用', value: '10,000円 (税抜)' },
+    { item: '最低契約期間', value: '1年' },
     { item: 'サーバー・ドメイン費用', value: '月額費用に含む' },
     { item: '修正・更新回数', value: '無制限' },
     { item: '解約', value: '契約期間満了後\nいつでも可能' },
@@ -27,13 +27,13 @@ const Conditions: React.FC = () => {
           {conditions.map((condition, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-slate-200 text-center h-32 flex flex-col justify-center">
               <h3 className="text-lg font-semibold text-slate-800 mb-3">{condition.item}</h3>
-              <div className="text-xl font-bold text-blue-600">
-                {condition.value.includes('込む') ? 
+              <div className={`font-bold ${(condition.item === '初期費用' || condition.item === '月額費用' || condition.item === '最低契約期間') ? 'text-3xl text-red-600' : 'text-xl text-blue-600'}`}>
+                {condition.value.includes('込む') ?
                   <div className="flex items-center justify-center">
                     <CheckIcon className="w-4 h-4 text-green-500 mr-2" />
                     {condition.value}
                   </div>
-                : 
+                :
                   condition.value.split('\n').map((line, lineIndex) => (
                     <div key={lineIndex} className="text-center">
                       {line}
@@ -44,7 +44,6 @@ const Conditions: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-center mt-8 text-base text-slate-500">※詳細なプランやオプションについては、無料相談にてご案内いたします。</p>
       </div>
     </section>
   );
