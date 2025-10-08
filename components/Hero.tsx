@@ -5,8 +5,8 @@ import { CheckCircleIcon } from './Icons';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative bg-slate-50 py-20 md:py-32">
-       <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{backgroundImage: "url('https://picsum.photos/1600/900?grayscale&blur=2')"}}></div>
+    <section id="hero" className="relative bg-slate-50 py-20 md:py-32 min-h-[60vh]">
+       <div className="absolute inset-0 bg-center bg-no-repeat opacity-10" style={{backgroundImage: "url('/1.png')", backgroundSize: 'contain', backgroundPosition: 'center center'}}></div>
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
           リード獲得を最大化する<br />

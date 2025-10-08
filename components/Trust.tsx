@@ -6,7 +6,7 @@ const achievements = [
     title: '制作実績',
     heading: '豊富な制作実績',
     description: 'これまで100本以上のLP制作を手がけ、業界問わず成果を出し続けています。',
-    imageUrl: 'https://picsum.photos/id/2/400/300',
+    imageUrl: '/6.png',
   },
   {
     title: '顧客満足度',
@@ -18,7 +18,7 @@ const achievements = [
     title: 'サポート体制',
     heading: '充実したサポート体制',
     description: 'LP制作から運用まで、専任チームが一貫してサポート。お客様のビジネス成功まで責任を持って伴走します。',
-    imageUrl: 'https://picsum.photos/id/1/400/300',
+    imageUrl: '/7.png',
   },
 ];
 
@@ -37,7 +37,7 @@ const Trust: React.FC = () => {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg border border-slate-200 overflow-hidden">
+            <div key={index} className="bg-white rounded-lg shadow-lg border border-slate-200 overflow-hidden flex flex-col h-full">
               <div className="p-6">
                 <div className="text-center mb-4">
                   <span className="inline-block bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">
@@ -51,11 +51,12 @@ const Trust: React.FC = () => {
                   {achievement.description}
                 </p>
               </div>
-              <div className="px-6 pb-6">
-                <img 
-                  src={achievement.imageUrl} 
+              <div className="px-6 pb-6 mt-auto">
+                <img
+                  src={achievement.imageUrl}
                   alt={achievement.heading}
-                  className="w-full h-48 object-contain rounded-lg"
+                  className={`w-full h-48 rounded-lg ${achievement.heading === '高い専門性' ? 'object-contain' : 'object-cover'} ${achievement.heading === '豊富な制作実績' ? '' : achievement.heading === '高い専門性' ? '' : 'object-center'}`}
+                  style={achievement.heading === '豊富な制作実績' ? { objectPosition: 'center 25%' } : {}}
                 />
               </div>
             </div>

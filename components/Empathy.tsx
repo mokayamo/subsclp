@@ -39,12 +39,11 @@ const Empathy: React.FC = () => {
             {/* 右側：画像 */}
             <div className="flex-1 flex justify-center">
               <div className="relative w-full max-w-md h-full">
-                <img 
-                  src="https://picsum.photos/400/400?business&grayscale" 
+                <img
+                  src="/2.png"
                   alt="悩んでいるビジネスパーソン"
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
-                <div className="absolute inset-0 bg-blue-600/10 rounded-lg"></div>
               </div>
             </div>
           </div>

@@ -5,17 +5,17 @@ const features = [
   {
     title: '制作コストを大幅に削減し、投資対効果を最大化',
     description: '数十万円以上かかることもあるLP制作の初期費用が0円に。低リスクで新しいマーケティング施策を始められ、web集客に最も必要な広告費に予算を回すことができます。',
-    imageUrl: 'https://picsum.photos/id/1074/600/400',
+    imageUrl: '/3.png',
   },
   {
     title: '機会損失を防ぎ、スピーディーにビジネスを展開',
     description: '「LPがあれば受注できたのに...」そんな機会損失を防ぎます。市場の変化や顧客のニーズに素早く対応し、競合他社に差をつけることができます。',
-    imageUrl: 'https://picsum.photos/id/1/600/400',
+    imageUrl: '/4.png',
   },
   {
     title: 'LP制作・運用の手間から解放され、本業に集中',
     description: '専門的な知識が必要なLPの制作や更新作業はすべて丸投げ。担当者様は本来注力すべきコア業務に集中でき、組織全体の生産性向上に貢献します。',
-    imageUrl: 'https://picsum.photos/id/10/600/400',
+    imageUrl: '/5.png',
   },
 ];
 
