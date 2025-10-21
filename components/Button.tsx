@@ -25,9 +25,9 @@ export const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-4';
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-10 py-4 text-lg',
+    sm: 'px-4 py-2 text-lg',
+    md: 'px-6 py-3 text-xl',
+    lg: 'px-10 py-4 text-2xl',
   };
 
   const variantClasses = {
