@@ -5,8 +5,8 @@ import { ArrowDownIcon } from './Icons';
 const steps = [
   {
     step: 1,
-    title: '資料ダウンロード',
-    description: 'まずは当ページのフォームから資料ダウンロードをお申し込みください。ご契約書を送付いたしますので、契約の締結をいただきます。',
+    title: 'フォーム入力',
+    description: 'まずは当ページのフォームをご入力ください。ご契約書を送付いたしますので、契約の締結をいただきます。',
   },
   {
     step: 2,

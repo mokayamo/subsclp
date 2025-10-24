@@ -54,11 +54,12 @@ The application follows a modular component architecture with each landing page 
   - `Icons.tsx` - Shared icon components
 
 ### Key Implementation Details
-- **Design System**: BtoB-focused design with blue/white/gray color scheme and blue CTA buttons (「資料を受けとる」)
-- **Form Handling**: Contact form in `Closing.tsx` with required fields (name, email, message) and privacy policy consent validation
-- **Legal Pages**: Static HTML files in `public/` directory (terms.html, privacy.html, law.html)
-- **Path Aliases**: `@/*` maps to project root directory
+- **Design System**: BtoB-focused design with blue/white/gray color scheme and orange CTA buttons (「まずは相談」)
+- **Form Handling**: Contact form in `Closing.tsx` with required fields (name, company, email) and optional consultation content, plus privacy policy consent validation
+- **Custom Images**: All sections use custom PNG images (1.png through 7.png) stored in `public/` directory for professional appearance
+- **External Links**: Footer links to company website (https://temahima.co.jp/about/) and privacy policy (https://temahima.co.jp/privacy/)
 - **Responsive Design**: Mobile-first approach with Tailwind responsive utilities
+- **Hero Section**: Full-height section (90vh) with background image to create strong first impression
 - **Section Order**: Hero → Empathy → Causes → Features → Benefits → Process → Conditions → Trust → Closing
 
 ### Current Deployment Setup
@@ -74,15 +75,17 @@ The contact form in `Closing.tsx` currently uses mock implementation (setTimeout
 - API endpoint for form submissions
 - Proper email delivery service
 
-### Legal Compliance
-Three static legal pages are required and implemented:
-- 利用規約 (Terms of Service)
-- プライバシーポリシー (Privacy Policy) 
-- 特定商取引法に基づく表示 (Commercial Transaction Act)
+### External Company Integration
+The site now represents 株式会社テマヒマ (Temahima Corp) with external links:
+- Company information and privacy policy link to https://temahima.co.jp/
+- Footer simplified to only show essential links (company info and privacy policy)
+- Copyright attribution updated to 株式会社テマヒマ
 
-### Environment Variables
-Optional for extended functionality:
-- `GEMINI_API_KEY` - For AI-powered features (not currently used in main flow)
+### Image Asset Management
+- Custom professional images (1.png through 7.png) are used throughout the site
+- Images should be placed in `public/` directory for direct access
+- Hero background uses `backgroundSize: 'contain'` with 10% opacity for subtle effect
+- Trust section images use conditional object positioning for optimal display
 
 ## Development Guidelines
 
@@ -99,7 +102,9 @@ Always run `npm run build` after significant changes to ensure production readin
 - Maintain Japanese content in components as per target audience
 - Preserve existing BtoB design language (professional, trustworthy)
 - Consistent font sizes: Headings (`text-3xl md:text-4xl`), section descriptions (`text-xl`), content text (`text-lg`)
-- All CTAs use consistent "資料を受けとる" button text except form submission ("ご相談内容を送信する")
+- All CTAs use consistent "まずは相談" button text except form submission ("ご相談内容を送信する")
+- Button component has enhanced sizing: larger text and improved visual hierarchy
+- Hero section uses 90vh height for strong visual impact on first view
 
 ### Deployment Workflow
 1. Make changes locally
